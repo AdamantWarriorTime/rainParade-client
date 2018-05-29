@@ -3,18 +3,82 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rain on your Parade</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/icons.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/layout.css">
+  <link rel="stylesheet" href="./styles/module.css">
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="menu">
       <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li></li>
+        <li> <a href ="#">Home</a></li>
+        <li> <a href ="#">About Us</a></li>
+        <li> <a href ="#"></a></li>
       </ul>
     </nav>
   </header>
-  <main></main>
-  <footer></footer>
+  <main>
+    <section class="splash tab-content" id="start-page">
+      <p>
+        Let us help you plan your event
+      </p>
+    <button id="start-button">Begin</button>
+    </section>
+    <section class="splash" id="calendar">
+      <input type="date">
+    </section>
+    <section class="splash" id="location">
+      <input type="text">
+    </section>
+    <section class="splash" id="results">
+
+    </section>
+    <section class="tab-content" id="about-us">
+      <div>
+        <h2>
+          Andrew Peacock
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab vel, aliquam nihil pariatur voluptatem earum corrupti eos delectus cumque aperiam hic iste consequatur inventore ad voluptatibus harum quasi odit id.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Mario Nishio
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab vel, aliquam nihil pariatur voluptatem earum corrupti eos delectus cumque aperiam hic iste consequatur inventore ad voluptatibus harum quasi odit id.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Matthew Gordon
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab vel, aliquam nihil pariatur voluptatem earum corrupti eos delectus cumque aperiam hic iste consequatur inventore ad voluptatibus harum quasi odit id.
+        </p>
+      </div>
+      <div>
+        <h2>
+          Ria Agnes Jose
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab vel, aliquam nihil pariatur voluptatem earum corrupti eos delectus cumque aperiam hic iste consequatur inventore ad voluptatibus harum quasi odit id.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+   <!-- External CDN Resources -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+   <!-- Application Resources -->
+   <script src="./scripts/index.js" type="text/javascript"></script>
 </body>
 </html>
