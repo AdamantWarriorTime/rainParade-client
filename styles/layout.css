@@ -1,0 +1,26 @@
+#mainHeader {
+  background-color: #011936;
+  color: #F4FFFD;
+  height: 100px;
+  font-size: 2em;
+}
+
+.menu a {
+  background-color: #2F4858;
+  color: #F4FFFD;
+  text-decoration: none;
+}
+
+.menu li {
+  margin: 0.25em;
+  padding: 0.25em;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
