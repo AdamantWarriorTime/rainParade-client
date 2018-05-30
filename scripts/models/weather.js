@@ -11,7 +11,7 @@ var app = app || {};
   }; 
 
   Weather.find = (userEvent, callback) => {
-    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/weather`)
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/weather`, userEvent)
     .then(console.log)
     .catch(errorCallback);
   } 

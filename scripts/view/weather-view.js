@@ -22,7 +22,11 @@ var app = app || {};
         console.log(userEvent)
         event.target.zipCode.value = '';
         event.target.userLocation.value = '';
-        module.Weather.find(userEvent, weatherView.initSearchResultPage);
+        for(let i=1; i < 11; i++){
+          let year = parseInt(userEvent.date.split('-')[0]) - i;
+          userEvent.date.replace(/^\d{1,4}/g, year.toString())
+          module.Weather.find(userEvent, weatherView.initSearchResultPage);
+        }
       })
     })
   }
