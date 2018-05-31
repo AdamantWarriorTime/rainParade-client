@@ -6,8 +6,11 @@ var app = app || {};
 (function (module) {
 
     $('.icon-menu').on('click', function(event) {
+      //$('.menu').addClass('hamburger-click');
       $('.menu').slideToggle(350);
     })
+
+
 
   const weatherView = {};
   const userData = {};
