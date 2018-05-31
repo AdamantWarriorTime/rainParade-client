@@ -7,13 +7,18 @@ var app = app || {};
   function errorCallback(err) {
     console.error(err);
     module.errorView.initErrorPage(err);
+  }
 
-  }; 
+  function Weather(rawObj) {
+    Object.keys(rawObj).forEach(key => this[key] = rawObj[key]);
+  }
 
-  Weather.find = (userEvent, callback) => {
-    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/weather`, userEvent)
-    .then(console.log)
-    .catch(errorCallback);
-  } 
-  module.Event = Event;
+  Weather.findData = userData => {
+    console.log(userData);
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/location`, userData)
+      .then(console.log)
+      .catch(errorCallback);
+  };
+
+  module.Weather = Weather;
 })(app);
