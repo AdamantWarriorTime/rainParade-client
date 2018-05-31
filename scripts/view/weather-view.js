@@ -5,21 +5,17 @@ var app = app || {};
 
 (function (module) {
 
-<<<<<<< HEAD
   $('.icon-menu').on('click', function(event) {
     $('.menu').slideToggle(350);
   });
-=======
-    $('.icon-menu').on('click', function(event) {
-      //$('.menu').addClass('hamburger-click');
-      $('.menu').slideToggle(350);
-    })
->>>>>>> 9e9bb2445be36ac5b0a1be3bbd97de2144c018b5
 
 
 
   const weatherView = {};
   const userData = {};
+
+
+
 
   weatherView.initIndexPage = function() {
     module.showOnly('#start-page');
@@ -27,7 +23,7 @@ var app = app || {};
 
   weatherView.initDateSearch = function() {
     console.log('hello');
-    module.showOnly('#calendar');
+    module.showOnly('.calendar');
     $('#calendarForm').on('submit', function(event) {
       event.preventDefault();
       userData.date = event.target.userDate.value;
@@ -38,7 +34,7 @@ var app = app || {};
   };
 
   weatherView.initLocationSearch = function() {
-    module.showOnly('#location');
+    module.showOnly('.location');
     $('#locationForm').on('submit', function(event) {
       event.preventDefault();
       userData.location = event.target.userLocation.value;
