@@ -4,7 +4,7 @@ var app = app || {};
 
 (function(module){
 
-  let productionApiUrl = 'https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND';
+  let productionApiUrl = 'https://rain-parade.herokuapp.com/';
   let developmentApiUrl = 'http://localhost:3000';
 
   module.isProduction= /^(?!localhost|127)/.test(window.location.hostname);
