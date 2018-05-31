@@ -23,7 +23,7 @@
   display: inline;
 }
 
-#intro-text {
+.instructionBox {
 
   border: #011936 solid 2px;
   background-color: #86bbd8;
@@ -71,9 +71,6 @@ right: 0;
   font-size: calc(4vw + 4vh + 2vmin);
 }
 
-.icon-menu :hover{
-  color: #86bbd8;
-}
 
 
 /* footer{
