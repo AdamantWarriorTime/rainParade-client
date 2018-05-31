@@ -7,7 +7,36 @@
   display: none;
 }
 
+.hamburger-click{
+  display: none;
+  width: 100vw;
+}
 
+.hamburger-click ul {
+  display: flex;
+  background-color: #86bbd8;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.hamburger-click li a  {
+  background-color: #111111 ;
+}
+
+#start-button {
+  text-decoration: none;
+  text-align: center;
+  font-size: 40px;
+  border: #111111 solid 3px;
+  padding: 5px;
+  margin: auto;
+  display: block;
+  background-color: #f4fffd;
+  color: #011936;
+  opacity: 0.75;
+  width: 25vw;
+  margin-top: 5vh;
+}
 
 
 @media only screen and (min-width: 501px){
@@ -20,5 +49,18 @@
  .menu{
    display: inline;
  }
+
+ .hamburger-click ul {
+ display: flex;
+ background-color: #011936;
+ justify-content: space-around;
+ width: 100%;
+}
+
+
+
+
+
+
 
 }

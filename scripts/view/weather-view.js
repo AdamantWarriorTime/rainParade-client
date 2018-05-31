@@ -5,9 +5,18 @@ var app = app || {};
 
 (function (module) {
 
+<<<<<<< HEAD
   $('.icon-menu').on('click', function(event) {
     $('.menu').slideToggle(350);
   });
+=======
+    $('.icon-menu').on('click', function(event) {
+      //$('.menu').addClass('hamburger-click');
+      $('.menu').slideToggle(350);
+    })
+>>>>>>> 9e9bb2445be36ac5b0a1be3bbd97de2144c018b5
+
+
 
   const weatherView = {};
   const userData = {};

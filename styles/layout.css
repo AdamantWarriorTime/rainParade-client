@@ -21,10 +21,22 @@
   font-size: calc(2vw + 2vh + 0.25vmax);
   margin:auto;
   display: inline;
-  
-
 }
 
+#intro-text {
+
+  border: #011936 solid 2px;
+  background-color: #86bbd8;
+  line-height: 1em;
+  font-size: calc(2vw + 2vh + 0.05vmax);
+  opacity: 0.75;
+  margin-top: 13vh;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
 .menu li {
   margin: 0.25em;
   padding: 0.25em;
@@ -51,12 +63,18 @@ position: absolute;
 top: 0;
 right: 0;
 }
+
 .icon-menu{
   float: left;
   margin-top: 5px;
   margin-right: 10px;
   font-size: calc(4vw + 4vh + 2vmin);
 }
+
+.icon-menu :hover{
+  color: #86bbd8;
+}
+
 
 /* footer{
   
