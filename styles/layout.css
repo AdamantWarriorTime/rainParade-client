@@ -1,15 +1,15 @@
 #mainHeader {
   background-color: #011936;
   color: #F4FFFD;
-  height: 150px;
-  font-size: 2em;
+  height:calc(4vw + 4vh + 10vmin);
+  font-size: calc(2vw + 2vh + 0.15vmax);
 }
 .menu{
   width:600px;
   margin:auto;
 }
 .menu a {
-  padding:15px;
+  padding:1vh;
   background-color: #2F4858;
   color: #F4FFFD;
   text-decoration: none;
@@ -18,9 +18,10 @@
 #logo{
   padding-top:10px;
   font-family: 'Bungee Inline', cursive;
-  font-size:40px;
+  font-size: calc(2vw + 2vh + 0.25vmax);
   margin:auto;
-  width:35%;
+  display: inline;
+  
 
 }
 
@@ -36,22 +37,25 @@
 
 
 .clearfix::after {
-  content: "";
   clear: both;
-  display: table;
-  
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
 }
 .icon-umbrella{
-font-size: 3em;
-float: left;
+font-size: calc(4vw + 4vh + 2vmin);
 margin-left:200px;
-
+position: absolute;
+top: 0;
+right: 0;
 }
 .icon-menu{
-  float: right;
+  float: left;
   margin-top: 5px;
   margin-right: 10px;
-  font-size:3em;
+  font-size: calc(4vw + 4vh + 2vmin);
 }
 
 /* footer{

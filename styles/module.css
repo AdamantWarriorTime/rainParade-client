@@ -1,12 +1,24 @@
+#logo {
+  display: inline;
+}
+
+
 .menu{
-  display:none;
+  display: none;
 }
 
 
 
 
-@media only screen and (min-width: 640px){
+@media only screen and (min-width: 501px){
+
+  
+  .icon-menu {
+    display: none;
+  }
+
  .menu{
-   display:inline;
+   display: inline;
  }
+
 }
