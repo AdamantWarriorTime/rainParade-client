@@ -14,8 +14,11 @@ var app = app || {};
   };
 
   module.showOnly = (selector) => {
+    console.log("before");
     $('.container').hide();
+    console.log('selector', selector);
     $(selector).show();
+
   };
 
   module.render = (templateId, data) => {

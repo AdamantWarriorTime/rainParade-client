@@ -5,16 +5,9 @@ var app = app || {};
 
 (function (module) {
 
-<<<<<<< HEAD
-  $('.icon-menu').on('click', function(event) {
+  $('.icon-menu').on('click', function() {
     $('.menu').slideToggle(350);
   });
-=======
-    $('.icon-menu').on('click', function(event) {
-      //$('.menu').addClass('hamburger-click');
-      $('.menu').slideToggle(350);
-    })
->>>>>>> 9e9bb2445be36ac5b0a1be3bbd97de2144c018b5
 
 
 
@@ -24,7 +17,7 @@ var app = app || {};
   weatherView.initIndexPage = function() {
     module.showOnly('#start-page');
   };
-
+  
   weatherView.initDateSearch = function() {
     console.log('hello');
     module.showOnly('#calendar');
@@ -49,7 +42,8 @@ var app = app || {};
   };
 
   weatherView.initAboutUsPage = function(){
-    app.showOnly('.about-us');
+    module.showOnly('#about-us');
+    console.log('test initabout');
   };
 
   // weatherView.initSearchPage = function(){
