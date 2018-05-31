@@ -5,9 +5,9 @@ var app = app || {};
 
 (function (module) {
 
-    $('.icon-menu').on('click', function(event) {
-      $('.menu').slideToggle(350);
-    })
+  $('.icon-menu').on('click', function(event) {
+    $('.menu').slideToggle(350);
+  });
 
   const weatherView = {};
   const userData = {};
@@ -39,6 +39,9 @@ var app = app || {};
     });
   };
 
+  weatherView.initAboutUsPage = function(){
+    app.showOnly('.about-us');
+  };
 
   // weatherView.initSearchPage = function(){
   //   module.showOnly('#calendar')
@@ -66,7 +69,7 @@ var app = app || {};
   //   })
   // }
 
-  
+
 
   module.weatherView = weatherView;
   module.userData = userData;
