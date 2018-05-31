@@ -1,5 +1,10 @@
+html{
+  height:100%;
+
+}
+
 body{
-  background-image: url("/images/bokeh-drops-of-water-rain-8486.jpg");
+  background-image: url("/images/rainy_wallpapers_1080p_022.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
