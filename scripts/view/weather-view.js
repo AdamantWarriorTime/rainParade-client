@@ -5,6 +5,7 @@ var app = app || {};
 
 (function (module) {
 
+
   $('.icon-menu').on('click', function(event) {
     $('.menu').slideToggle(350);
   });
@@ -20,7 +21,7 @@ var app = app || {};
   weatherView.initIndexPage = function() {
     module.showOnly('#start-page');
   };
-
+  
   weatherView.initDateSearch = function() {
     console.log('hello');
     module.showOnly('.calendar');
@@ -45,7 +46,8 @@ var app = app || {};
   };
 
   weatherView.initAboutUsPage = function(){
-    app.showOnly('.about-us');
+    module.showOnly('#about-us');
+    console.log('test initabout');
   };
 
   // weatherView.initSearchPage = function(){
