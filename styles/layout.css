@@ -1,0 +1,82 @@
+#mainHeader {
+  background-color: #011936;
+  color: #F4FFFD;
+  height:calc(4vw + 4vh + 10vmin);
+  font-size: calc(2vw + 2vh + 0.15vmax);
+}
+.menu{
+  width:600px;
+  margin:auto;
+}
+.menu a {
+  padding:1vh;
+  background-color: #2F4858;
+  color: #F4FFFD;
+  text-decoration: none;
+  border-radius:5%;
+}
+#logo{
+  padding-top:10px;
+  font-family: 'Bungee Inline', cursive;
+  font-size: calc(2vw + 2vh + 0.25vmax);
+  margin:auto;
+  display: inline;
+}
+
+.instructionBox {
+
+  border: #011936 solid 2px;
+  background-color: #86bbd8;
+  line-height: 1em;
+  font-size: calc(2vw + 2vh + 0.05vmax);
+  opacity: 0.75;
+  margin-top: 13vh;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+.menu li {
+  margin: 0.25em;
+  padding: 0.25em;
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2.75em;
+ 
+}
+
+
+.clearfix::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+.icon-umbrella{
+font-size: calc(4vw + 4vh + 2vmin);
+margin-left:200px;
+position: absolute;
+top: 0;
+right: 0;
+}
+
+.icon-menu{
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: calc(4vw + 4vh + 2vmin);
+}
+
+
+
+/* footer{
+  
+  background-color: #011936;
+  color: #F4FFFD;
+  height: 100px;
+  font-size: 2em;
+} */

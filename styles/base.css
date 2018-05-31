@@ -1,0 +1,11 @@
+html{
+  height:100%;
+
+}
+
+body{
+  background-image: url("/images/rainy_wallpapers_1080p_022.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Poiret One', cursive;
+}
