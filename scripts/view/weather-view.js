@@ -4,6 +4,11 @@ var app = app || {};
 
 
 (function (module) {
+
+    $('.icon-menu').on('click', function(event) {
+      $('.menu').slideToggle(350);
+    })
+
   const weatherView = {};
   const userData = {};
 
