@@ -38,7 +38,14 @@
   margin-top: 5vh;
 }
 
-
+#locationForm {
+  display: flex;
+  margin-top: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 230px;
+  
+}
 @media only screen and (min-width: 501px){
 
   

@@ -15,6 +15,9 @@ var app = app || {};
   const weatherView = {};
   const userData = {};
 
+
+
+
   weatherView.initIndexPage = function() {
     module.showOnly('#start-page');
   };
@@ -32,7 +35,7 @@ var app = app || {};
   };
 
   weatherView.initLocationSearch = function() {
-    module.showOnly('#location');
+    module.showOnly('.location');
     $('#locationForm').on('submit', function(event) {
       event.preventDefault();
       userData.location = event.target.userLocation.value;
