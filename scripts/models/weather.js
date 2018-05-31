@@ -13,6 +13,18 @@ var app = app || {};
     Object.keys(rawObj).forEach(key => this[key] = rawObj[key]);
   }
 
+  Weather.info;
+
+  Weather.prototype.toShowMore = function() {
+    return app.render('showMore-template' ,this)
+  }
+
+  Weather.prototype.toOverview = function() {
+    return app.render('overview-template', this)
+  }
+
+  Weather.load = obj => Weather.info = new Weather(obj);
+
   Weather.findData = userData => {
     console.log(userData);
     $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/location`, userData)
