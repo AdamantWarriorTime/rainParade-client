@@ -20,9 +20,9 @@
   <header>
     <nav class="menu">
       <ul>
-        <li> <a href="#">Home</a></li>
-        <li> <a href="#">About Us</a></li>
-        <li> <a href="#"></a></li>
+        <li> <a href="/">Home</a></li>
+        <li> <a href="">About Us</a></li>
+        <li> <a href=""></a></li>
       </ul>
     </nav>
   </header>
@@ -37,7 +37,7 @@
       <p>
         Let us help you plan your event
       </p>
-      <a href="#" id="start-button">Begin</a>
+      <a href="/weather/start" id="start-button">Begin</a>
     </section>
 
     <section class="container" id="calendar">
@@ -50,7 +50,7 @@
     <section class="container" id="location">
       <form id="locationForm">
         <input type="text" name="userLocation">
-        <input type="number" name="zipCode" maxlength="5">
+        <!-- <input type="number" name="zipCode" maxlength="5"> -->
         <button type="submit">Submit</button>
       </form>
     </section>
@@ -100,15 +100,15 @@
   </footer>
   <!-- External CDN Resources -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <!--<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script> -->
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
 
    <!-- Application Resources -->
    <script src="./scripts/index.js" type="text/javascript"></script>
+   <script src="/scripts/models/weather.js" type="text/javascript"></script>
    <script src="/scripts/view/error-view.js" type="text/javascript"></script>
    <script src="/scripts/view/weather-view.js" type="text/javascript"></script>
    <script src="/scripts/view/routes.js" type="text/javascript"></script>
-   <script>app.weatherView.initSearchPage()</script>
 
 </body>
 </html>
