@@ -25,6 +25,11 @@
     </h3>
   </script>
 
+  <script type="text/x-handlebars-template" id="searchPage">
+  
+    <p class="historyPage">For <b>{{address}}</b> its rained <b>{{rainy_days}} time(s)</b> in the past 10 years on <b>{{date}}. The average temperature was {{avg_temp}}.</b></p>
+  </script>
+
   <script type="text/x-handlebars-template" id="overview-template">
     <form id="saveWeather">
       <p class="instructionBox">For <b>{{address}}</b> its rained <b>{{rainy_days}} time(s)</b> in the past 10 years on <b>{{date}}</b></p>
@@ -46,13 +51,17 @@
 
         <li> <a href="/">Home</a></li>
         <li> <a href="/about-us">About Us</a></li>
-        <li> <a href="">Your Events</a></li>
+        <li> <a href="/searchhistory">Your Events</a></li>
 
       </ul>
     </nav>
   </header>
 
   <main>
+  <section>
+    <p id="historyPageInit"></p>
+  </section>
+
     <section class="errorView container">
       <h3 class="viewTitle">There's an issue</h3>
       <section id="error-message"></section>
