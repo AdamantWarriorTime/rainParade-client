@@ -30,7 +30,7 @@ var app = app || {};
     $('#saveWeather').on('submit', function(event) {
       event.preventDefault();
       module.Weather.create(module.Weather.info); 
-    })
+    });
   };
   
   weatherView.initDateSearch = function() {
@@ -56,11 +56,16 @@ var app = app || {};
     });
   };
 
-  weatherView.initAboutUsPage = function(){
+  weatherView.initAboutUsPage = function() {
     module.showOnly('#about-us');
     console.log('test initabout');
   };
 
+
+  weatherView.initResultPage = function() {
+    module.showOnly('#showMore');
+    $('#showMore').append(module.Weather.info.toResults());
+  };
   // weatherView.initSearchPage = function(){
   //   module.showOnly('#calendar')
   //   $('#calendarForm').on('submit', function(event) {

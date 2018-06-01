@@ -23,6 +23,10 @@ var app = app || {};
     return app.render('overview-template', this);
   };
 
+  Weather.prototype.toResults = function() {
+    return app.render('results-template', this);
+  };
+
   // Prototype function to calculate how many rainy days there were
   Weather.calcRainyDays = function() {
     Weather.info.rainy_days = 0;
@@ -53,13 +57,13 @@ var app = app || {};
   Weather.create = obj => 
     $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/weather`, obj)
       .then(() => page('/'))
-      .catch(errorCallback)
+      .catch(errorCallback);
 
   Weather.fetchAll = callback =>
     $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/searchhistory`)
-    .then(Weather.load)
-    .then(callback)
-    .catch(errorCallback);
+      .then(Weather.load)
+      .then(callback)
+      .catch(errorCallback);
 
 
 

@@ -20,9 +20,22 @@
   </script>
 
   <script type="text/x-handlebars-template" id="results-template">
-    <h3>
-      
-    </h3>
+      <div>
+        <h2>Your Event on {{date}} at {{address}}</h2>
+        <h2>Expect highs of {{avgHigh}}°C and lows of {{avgLow}}°C</h2>
+        <ul>
+          <li>On {{years.[0]}} it was {{summary.[0]}} </li>
+          <li>On {{years.[1]}} it was {{summary.[1]}} </li>
+          <li>On {{years.[2]}} it was {{summary.[2]}} </li>
+          <li>On {{years.[3]}} it was {{summary.[3]}} </li>
+          <li>On {{years.[4]}} it was {{summary.[4]}} </li>
+          <li>On {{years.[5]}} it was {{summary.[5]}} </li>
+          <li>On {{years.[6]}} it was {{summary.[6]}} </li>
+          <li>On {{years.[7]}} it was {{summary.[7]}} </li>
+          <li>On {{years.[8]}} it was {{summary.[8]}} </li>
+          <li>On {{years.[9]}} it was {{summary.[9]}} </li>
+        </ul>
+      </div>
   </script>
 
   <script type="text/x-handlebars-template" id="overview-template">
@@ -88,6 +101,8 @@
     <section class="container" id="results">
     </section>
 
+    <section class="container" id="showMore">
+    </section>
 
    <section class="container" id="about-us">
    <div>
