@@ -49,7 +49,13 @@ var app = app || {};
   };
 
   Weather.load = obj => Weather.info = new Weather(obj);
-  Weather.loadAll = arr => arr.forEach(element => Weather.all.push( new Weather(element)));
+
+  Weather.loadAll = arr => {
+    return arr.forEach(element => {
+      element.date = element.date.substring(0, 10)
+      Weather.all.push(new Weather(element));
+    })
+  }
 
   Weather.findData = (userData, callback) => {
     console.log(userData);
