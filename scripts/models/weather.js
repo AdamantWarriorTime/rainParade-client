@@ -20,5 +20,11 @@ var app = app || {};
       .catch(errorCallback);
   };
 
+  Weather.create = weather => 
+  $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/date`, weather)
+  .then(console.log)
+  .then(console.log('boyhowdy'))
+
+
   module.Weather = Weather;
 })(app);
