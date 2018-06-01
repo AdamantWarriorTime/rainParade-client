@@ -40,7 +40,7 @@
 
   <script type="text/x-handlebars-template" id="searchPage">
   
-    <p class="historyPage">For <b>{{address}}</b> its rained <b>{{rainy_days}} time(s)</b> in the past 10 years on <b>{{date}}. The average temperature was {{avg_temp}}.</b></p>
+    <p class="history-item">For <b>{{address}}</b> its rained <b>{{rainy_days}} time(s)</b> in the past 10 years on <b>{{date}}. The average temperature was {{avg_temp}}.</b></p>
   </script>
 
   <script type="text/x-handlebars-template" id="overview-template">
@@ -73,8 +73,7 @@
   </header>
 
   <main>
-  <section>
-    <p id="historyPageInit"></p>
+  <section id="historyPageInit" class="container historyPage instructionBox">
   </section>
 
     <section class="errorView container">
@@ -92,7 +91,7 @@
     <section class="container location">
       <p class="instructionBox">Please enter the location of your event - You can use a street address, a city and state, or a zip code. </p>
       <form id="locationForm">
-        <input type="text" name="userLocation">
+        <input type="text" name="userLocation" required>
         <!-- <input type="number" name="zipCode" maxlength="5"> -->
         <button type="submit" class="nav-button">Next</button>
       </form>
