@@ -40,10 +40,12 @@
 
   <script type="text/x-handlebars-template" id="overview-template">
     <form id="saveWeather">
-      <p class="instructionBox">For <b>{{address}}</b> its rained <b>{{rainy_days}} time(s)</b> in the past 10 years on <b>{{date}}</b></p>
-      <a href="/show">Show More</a>
-      <a href="/">Search Again</a>
-      <button type="submit">Save</button>
+      <p class="instructionBox"><b>{{address}}</b> has rained <b>{{rainy_days}}</b> time(s)<br> for the past 10 years since <b>{{date}}</b></p>
+      <div id="results-button-container"></div>
+        <a class="nav-button results-button"href="/show">Show More</a>
+        <button type="submit" class="nav-button results-button">Save</button>
+        <a class="nav-button results-button"href="/">Search</a>
+      </div>
     </form>
   </script>
 
@@ -83,7 +85,7 @@
       <form id="locationForm">
         <input type="text" name="userLocation">
         <!-- <input type="number" name="zipCode" maxlength="5"> -->
-        <button type="submit">Next</button>
+        <button type="submit" class="nav-button">Next</button>
       </form>
     </section>
 
@@ -91,7 +93,7 @@
         <p class="instructionBox">Please select the desired date from the dropdown calendar!</p>
       <form id="calendarForm">
         <input type="date" required name="userDate">
-        <button type="submit">Submit</button>
+        <button type="submit" class="nav-button"> Submit</button>
       </form>
     </section>
 
