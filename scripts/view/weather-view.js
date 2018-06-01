@@ -24,9 +24,13 @@ var app = app || {};
 
   weatherView.initOverview = function() {
     module.showOnly('#overview');
-    module.Weather.info.calcRainyDays();
-    module.Weather.info.calcAvgTemp();
+    module.Weather.calcRainyDays();
+    module.Weather.calcAvgTemp();
     $('#overview').append(module.Weather.info.toOverview());
+    $('#saveWeather').on('submit', function(event) {
+      event.preventDefault();
+      module.Weather.create(module.Weather.info); 
+    })
   };
   
   weatherView.initDateSearch = function() {
