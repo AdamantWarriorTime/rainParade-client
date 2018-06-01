@@ -20,9 +20,11 @@ var app = app || {};
   
   weatherView.initIndexPage = function() {
     module.showOnly('#start-page');
+    $('form').off();
   };
 
   weatherView.initOverview = function() {
+    $('.calendar').empty();
     module.showOnly('#overview');
     module.Weather.calcRainyDays();
     module.Weather.calcAvgTemp();
@@ -34,7 +36,7 @@ var app = app || {};
   };
   
   weatherView.initDateSearch = function() {
-    console.log('hello');
+    $('.calendar').empty();
     module.showOnly('.calendar');
     $('#calendarForm').on('submit', function(event) {
       event.preventDefault();
