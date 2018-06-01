@@ -37,6 +37,28 @@
 
 
 }
+.ourNames {
+  font-size: 4vw;
+  color:white;
+  line-height: 2vw;
+  display: flex;
+
+}
+#about-us > div {
+  /* background-color: white; */
+  width: 62%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 6em;
+  font-weight: bolder;
+
+}
+
+#about-us>div >p {
+display:inline-block;
+
+}
+
 .menu li {
   margin: 0.25em;
   padding: 0.25em;
