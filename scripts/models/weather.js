@@ -14,14 +14,18 @@ var app = app || {};
   }
 
   Weather.info;
+  Weather.all = [];
 
   Weather.prototype.toShowMore = function() {
-    return app.render('showMore-template' ,this);
+    return app.render('showMore-template', this);
   };
 
   Weather.prototype.toOverview = function() {
     return app.render('overview-template', this);
   };
+  Weather.prototype.toHtml = function() {
+    return app.render('searchPage', this);
+  }
 
   Weather.prototype.toResults = function() {
     return app.render('results-template', this);
@@ -39,12 +43,13 @@ var app = app || {};
 
   // Prototype function to calculate the avg high, low and average
   Weather.calcAvgTemp = function() {
-    Weather.info.avgHigh = (Math.round(((Weather.info.temperatureHigh.reduce((previous, current) => previous + current))/10)*10))/10;
-    Weather.info.avgLow = (Math.round(((Weather.info.temperatureLow.reduce((previous, current) => previous + current))/10)*10))/10;
-    Weather.info.avg_temp = (Weather.info.avgHigh + Weather.info.avgLow)/2;
+    Weather.info.avgHigh = Math.round((Weather.info.temperatureHigh.reduce((previous, current) => previous + current))/10);
+    Weather.info.avgLow = Math.round((Weather.info.temperatureLow.reduce((previous, current) => previous + current))/10);
+    Weather.info.avg_temp = Math.round((Weather.info.avgHigh + Weather.info.avgLow)/2);
   };
 
   Weather.load = obj => Weather.info = new Weather(obj);
+  Weather.loadAll = arr => arr.forEach(element => Weather.all.push( new Weather(element)));
 
   Weather.findData = (userData, callback) => {
     console.log(userData);
@@ -54,16 +59,17 @@ var app = app || {};
       .catch(errorCallback);
   };
 
-  Weather.create = obj => 
+  Weather.create = obj => {
     $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/weather`, obj)
       .then(() => page('/'))
       .catch(errorCallback);
 
+  }
   Weather.fetchAll = callback =>
     $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/searchhistory`)
-      .then(Weather.load)
-      .then(callback)
-      .catch(errorCallback);
+    .then(Weather.loadAll)
+    .then(callback)
+    .catch(errorCallback);
 
 
 

@@ -12,6 +12,12 @@ var app = app || {};
   const weatherView = {};
   const userData = {};
 
+
+  weatherView.initSearchHistoryPage = function() {
+    module.showOnly('.historyPage');
+    module.Weather.all.forEach(element => $('#historyPageInit').append(element.toHtml()));
+  };
+  
   weatherView.initIndexPage = function() {
     module.showOnly('#start-page');
     $('form').off();
