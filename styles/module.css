@@ -154,24 +154,6 @@ button {
 
 }
 
-@media only screen and (min-width: 501px){
-
-  
-  .icon-menu {
-    display: none;
-  }
-
- .menu{
-   display: inline;
- }
-
- .hamburger-click ul {
- display: flex;
- background-color: #011936;
- justify-content: space-around;
- width: 100%;
-}          
-  
 @media only screen and (max-width: 944px){
 
   .results-button{
@@ -182,16 +164,34 @@ button {
 
 }
 
+
 @media only screen and (max-width: 570px){
   
-    .nav-button{
-      font-size: 1em;
-      font-weight: bold;
-    }
-  
-  
+  .nav-button{
+    font-size: 1em;
+    font-weight: bold;
   }
 
 
-
 }
+
+@media only screen and (min-width: 501px){
+
+  
+  .icon-menu {
+    display: none;
+  }
+
+ .menu{
+   display: inline;
+  }
+
+  .hamburger-click ul {
+  display: flex;
+  background-color: #011936;
+  justify-content: space-around;
+  width: 100%;
+  }
+}
+
+
