@@ -21,6 +21,13 @@ var app = app || {};
   weatherView.initIndexPage = function() {
     module.showOnly('#start-page');
   };
+
+  weatherView.initOverview = function() {
+    module.showOnly('#overview');
+    module.Weather.info.calcRainyDays();
+    module.Weather.info.calcAvgTemp();
+    $('#overview').append(module.Weather.info.toOverview());
+  };
   
   weatherView.initDateSearch = function() {
     console.log('hello');
@@ -29,7 +36,7 @@ var app = app || {};
       event.preventDefault();
       userData.date = event.target.userDate.value;
       console.log(userData.date);
-      module.Weather.findData(userData);
+      module.Weather.findData(userData, weatherView.initOverview);
       event.target.userDate.value = '';
     });
   };
