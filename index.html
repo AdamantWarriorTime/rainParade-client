@@ -19,6 +19,21 @@
       <p>{{status}}: {{statusText}}</p>
   </script>
 
+  <script type="text/x-handlebars-template" id="results-template">
+    <h3>
+      
+    </h3>
+  </script>
+
+  <script type="text/x-handlebars-template" id="overview-template">
+    <form>
+      <p class="instructionBox">For <b>{{address}}</b> its rained <b>{{rainyDays}} time(s)</b> in the past 10 years on <b>{{date}}</b></p>
+      <a href="/show">Show More</a>
+      <a href="/">Search Again</a>
+      <button type="submit">Save</button>
+    </form>
+  </script>
+
 </head>
 <body>
 
@@ -55,7 +70,7 @@
       <form id="locationForm">
         <input type="text" name="userLocation">
         <!-- <input type="number" name="zipCode" maxlength="5"> -->
-        <button type="next">Next</button>
+        <button type="submit">Next</button>
       </form>
     </section>
 
@@ -67,6 +82,8 @@
       </form>
     </section>
 
+    <section class="container" id="overview">
+    </section>
 
     <section class="container" id="results">
     </section>
