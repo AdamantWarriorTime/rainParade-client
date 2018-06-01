@@ -17,7 +17,7 @@ var app = app || {};
     module.showOnly('.historyPage');
     $('#historyPageInit').empty();
     module.Weather.all.forEach(element => $('#historyPageInit').append(element.toHtml()));
-    // module.Weather.all = [];
+    module.Weather.all = [];
   };
   
   weatherView.initIndexPage = function() {
