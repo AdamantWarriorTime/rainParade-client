@@ -45,15 +45,14 @@
 
   <script type="text/x-handlebars-template" id="overview-template">
     <form id="saveWeather">
-      <p class="instructionBox"><b>{{address}}</b> has rained <b>{{rainy_days}}</b> time(s)<br> for the past 10 years since <b>{{date}}</b></p>
-      <div id="results-button-container"></div>
-        <a class="nav-button results-button"href="/show">Show More</a>
+      <p class="instructionBox">{{address}}<br> has rained <b>{{rainy_days}}</b> time(s)<br> for the past 10 years on <b>{{date}}</b></p>
+      <div id="buttons">
         <button type="submit" class="nav-button results-button">Save</button>
-        <a class="nav-button results-button" href="/">Try Again</a>
-      </div>
+        <a class="nav-button results-button"href="/show">Show More</a>
+        <a class="nav-button results-button"href="/">Search Again</a>
+        </div>
     </form>
   </script>
-
 </head>
 <body>
 
@@ -85,14 +84,13 @@
       <div id="intro-text">
         <p class="instructionBox">Let us help you plan your next event! To see the weather patterns for the previous ten years on a given date, please click the button below.</p>
       </div>
-      <a href="/weather/start" id="start-button">Begin</a>
+      <a href="/weather/start" class="nav-button" id="start-button">Begin</a>
     </section>
     
     <section class="container location">
       <p class="instructionBox">Please enter the location of your event - You can use a street address, a city and state, or a zip code. </p>
       <form id="locationForm">
         <input type="text" name="userLocation" required>
-        <!-- <input type="number" name="zipCode" maxlength="5"> -->
         <button type="submit" class="nav-button">Next</button>
       </form>
     </section>
@@ -101,7 +99,7 @@
         <p class="instructionBox">Please select the desired date from the dropdown calendar!</p>
       <form id="calendarForm">
         <input type="date" required name="userDate">
-        <button type="submit" class="nav-button"> Submit</button>
+        <button type="submit" class="nav-button">Submit</button>
       </form>
     </section>
 

@@ -23,7 +23,12 @@
   background-color: #111111 ;
 }
 
-#start-button {
+.hamburger-click li a:hover  {
+  background-color: #011936 ;
+  border: #f4fffd solid 3px;
+}
+
+/* #start-button {
   text-decoration: none;
   text-align: center;
   font-size: 40px;
@@ -36,12 +41,12 @@
   opacity: 0.75;
   width: 25vw;
   margin-top: 5vh;
-}
+} */
 
 .nav-button{
   text-decoration: none;
   text-align: center;
-  font-size: 40px;
+  font-size: 3em;
   border: #111111 solid 3px;
   padding: 5px;
   margin: auto;
@@ -51,11 +56,18 @@
   opacity: 0.75;
   width: 25vw;
   margin-top: 5vh;
+  border-radius: 10px;
+}
+
+.nav-button:hover{
+  background-color: #011936;
+  border: #f4fffd solid 3px;
+  color: #f4fffd;
 }
 
 .results-button{
   display: inline-block;
-  border: #111111 solid 3px;
+  box-sizing: unset;
 }
 
 .overview-button{
@@ -63,8 +75,10 @@
   margin-left: 10%;
 }
 
-#results-button-container{
-  margin-left: 20%;
+#buttons{
+  margin-left: 10%;
+  width: 80%;
+  text-align: center;
 }
 
 
@@ -139,6 +153,7 @@ button {
   margin-right: 1%;
 
 }
+
 @media only screen and (min-width: 501px){
 
   
@@ -155,12 +170,27 @@ button {
  background-color: #011936;
  justify-content: space-around;
  width: 100%;
+}          
+  
+@media only screen and (max-width: 944px){
+
+  .results-button{
+    display:block;
+    width: 30vw;
+  }
+
+
 }
 
-
-
-
-
+@media only screen and (max-width: 570px){
+  
+    .nav-button{
+      font-size: 1em;
+      font-weight: bold;
+    }
+  
+  
+  }
 
 
 
