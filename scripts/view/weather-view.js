@@ -24,7 +24,7 @@ var app = app || {};
   };
 
   weatherView.initOverview = function() {
-    $('.calendar').empty();
+    $('#overview').empty();
     module.showOnly('#overview');
     module.Weather.calcRainyDays();
     module.Weather.calcAvgTemp();
@@ -36,7 +36,6 @@ var app = app || {};
   };
   
   weatherView.initDateSearch = function() {
-    $('.calendar').empty();
     module.showOnly('.calendar');
     $('#calendarForm').on('submit', function(event) {
       event.preventDefault();
@@ -66,6 +65,7 @@ var app = app || {};
 
 
   weatherView.initResultPage = function() {
+    $('#showMore').empty();
     module.showOnly('#showMore');
     $('#showMore').append(module.Weather.info.toResults());
   };

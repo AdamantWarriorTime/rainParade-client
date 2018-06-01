@@ -25,7 +25,7 @@ var app = app || {};
   };
   Weather.prototype.toHtml = function() {
     return app.render('searchPage', this);
-  }
+  };
 
   Weather.prototype.toResults = function() {
     return app.render('results-template', this);
