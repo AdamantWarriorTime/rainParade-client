@@ -38,6 +38,36 @@
   margin-top: 5vh;
 }
 
+.nav-button{
+  text-decoration: none;
+  text-align: center;
+  font-size: 40px;
+  border: #111111 solid 3px;
+  padding: 5px;
+  margin: auto;
+  display: block;
+  background-color: #f4fffd;
+  color: #011936;
+  opacity: 0.75;
+  width: 25vw;
+  margin-top: 5vh;
+}
+
+.results-button{
+  display: inline-block;
+  border: #111111 solid 3px;
+}
+
+.overview-button{
+  text-decoration: none;
+  margin-left: 10%;
+}
+
+#results-button-container{
+  margin-left: 20%;
+}
+
+
 /* #locationForm {
   display: flex;
   margin-top: 25vh;
