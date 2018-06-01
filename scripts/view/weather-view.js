@@ -12,11 +12,21 @@ var app = app || {};
   const weatherView = {};
   const userData = {};
 
+
+  weatherView.initSearchHistoryPage = function() {
+    module.showOnly('.historyPage');
+    $('#historyPageInit').empty();
+    module.Weather.all.forEach(element => $('#historyPageInit').append(element.toHtml()));
+    // module.Weather.all = [];
+  };
+  
   weatherView.initIndexPage = function() {
     module.showOnly('#start-page');
+    $('form').off();
   };
 
   weatherView.initOverview = function() {
+    $('#overview').empty();
     module.showOnly('#overview');
     module.Weather.calcRainyDays();
     module.Weather.calcAvgTemp();
@@ -28,7 +38,6 @@ var app = app || {};
   };
   
   weatherView.initDateSearch = function() {
-    console.log('hello');
     module.showOnly('.calendar');
     $('#calendarForm').on('submit', function(event) {
       event.preventDefault();
@@ -58,6 +67,7 @@ var app = app || {};
 
 
   weatherView.initResultPage = function() {
+    $('#showMore').empty();
     module.showOnly('#showMore');
     $('#showMore').append(module.Weather.info.toResults());
   };

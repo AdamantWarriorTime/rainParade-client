@@ -38,6 +38,11 @@
       </div>
   </script>
 
+  <script type="text/x-handlebars-template" id="searchPage">
+  
+    <p class="history-item">For <b>{{address}}</b> its rained <b>{{rainy_days}} time(s)</b> in the past 10 years on <b>{{date}}. The average temperature was {{avg_temp}}.</b></p>
+  </script>
+
   <script type="text/x-handlebars-template" id="overview-template">
     <form id="saveWeather">
       <p class="instructionBox">{{address}}<br> has rained <b>{{rainy_days}}</b> time(s)<br> for the past 10 years on <b>{{date}}</b></p>
@@ -60,13 +65,16 @@
 
         <li> <a href="/">Home</a></li>
         <li> <a href="/about-us">About Us</a></li>
-        <li> <a href="">Your Events</a></li>
+        <li> <a href="/searchhistory">Your Events</a></li>
 
       </ul>
     </nav>
   </header>
 
   <main>
+  <section id="historyPageInit" class="container historyPage instructionBox">
+  </section>
+
     <section class="errorView container">
       <h3 class="viewTitle">There's an issue</h3>
       <section id="error-message"></section>
@@ -82,8 +90,7 @@
     <section class="container location">
       <p class="instructionBox">Please enter the location of your event - You can use a street address, a city and state, or a zip code. </p>
       <form id="locationForm">
-        <input type="text" name="userLocation">
-        <!-- <input type="number" name="zipCode" maxlength="5" class="nav-button"> -->
+        <input type="text" name="userLocation" required>
         <button type="submit" class="nav-button">Next</button>
       </form>
     </section>
@@ -107,15 +114,17 @@
 
    <section class="container" id="about-us">
    <div>
-     <h1><b>MEET THE TEAM</b></h1>
-     <img id="group-pic" src="http://via.placeholder.com/550x250">
-     <p>Andrew Peacock</p>
+     <h2 id="teamMeet"><b>MEET THE TEAM</b></h2>
+     <div id="group-pic">
+     <img id = "group-image" src="images/rain on your parade.jpg">
+    </div>
+     <p class="ourNames">Andrew Peacock</p>
      <a href="https://github.com/todoville" class="icon-github"></a>
-     <p>Mario Nishio</p>
+     <p class="ourNames">Mario Nishio</p>
      <a href="https://github.com/Calamario"class="icon-github"></a>
-     <p>Matthew Gordon</p>
+     <p class="ourNames">Matthew Gordon</p>
      <a href="https://github.com/mattgdev"class="icon-github"></a>
-     <p>Ria Agnes Jose</p>
+     <p class="ourNames">Ria Agnes Jose</p>
      <a href="https://github.com/riaagnes"class="icon-github"></a>
    </div>
   </section>

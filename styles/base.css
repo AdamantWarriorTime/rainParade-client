@@ -8,4 +8,5 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Poiret One', cursive;
+  background-attachment: fixed;
 }
