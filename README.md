@@ -3,38 +3,14 @@ Planning an event takes a lot of effort. The last thing you want to happen on yo
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-
-
-### And coding style tests
-
+Fork both the client and server side JS in our AdamantWarriorTime (https://github.com/AdamantWarriorTime) 
+On your local device open source code with your text editor of choice
+To run from local device, 
+* export necessary API keys from Dark Sky API
+* export necessary API keys from Google Map API
+* export PORT=3000
+* export DB 
+Edit/Make changes to code 
 
 ## Deployment
 
@@ -55,10 +31,6 @@ Backend Deployed on Heroku
 * Google Map API
 * Dark Sky API
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Authors
 
 * **Mario Nishio**   https://github.com/Calamario
@@ -72,6 +44,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Meyer CSS Reset
+
