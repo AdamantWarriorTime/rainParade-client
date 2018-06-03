@@ -61,6 +61,10 @@ display:inline-block;
 
 }
 
+#about-us div a img{ 
+  width: 30%
+}
+
 .menu li {
   margin: 0.25em;
   padding: 0.25em;
