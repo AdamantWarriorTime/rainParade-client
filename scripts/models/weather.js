@@ -54,8 +54,8 @@ var app = app || {};
     return arr.forEach(element => {
       element.date = element.date.substring(0, 10)
       Weather.all.push(new Weather(element));
-    })
-  }
+    });
+  };
 
   Weather.findData = (userData, callback) => {
     console.log(userData);
@@ -70,12 +70,13 @@ var app = app || {};
       .then(() => page('/'))
       .catch(errorCallback);
 
-  }
+  };
+
   Weather.fetchAll = callback =>
     $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/searchhistory`)
-    .then(Weather.loadAll)
-    .then(callback)
-    .catch(errorCallback);
+      .then(Weather.loadAll)
+      .then(callback)
+      .catch(errorCallback);
 
 
 
